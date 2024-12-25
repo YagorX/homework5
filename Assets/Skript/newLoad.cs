@@ -35,6 +35,9 @@ public class newLoad : MonoBehaviour
 
     public void Start
     {
+        Color32 objColor;
+        objColor = gameObject.GetComponent<MeshRenderer>().material.color;
+        print(objColor.r + " "+ objColor.g + " "+ objColor.b+ " "+ objColor.a + " ");
         Cube.GetComponent<Renderer>().material.color = new Color32((byte)Random.Range(0, 255), (byte)Random.Range(0, 255), (byte)Random.Range(0, 255), 255);
         data.x = Cube.transform.pozition.x;
         data.y = Cube.transform.pozition.y;
